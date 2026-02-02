@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人简历 - zxy</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="nav-side" role="navigation">
+      <div class="theme-switcher">
+        <select id="themeSelect" aria-label="选择主题">
+          <option value="default">默认</option>
+          <option value="dark">深色</option>
+          <option value="warm">暖色</option>
+          <option value="blue">蓝色</option>
+        </select>
+      </div>
+      <nav class="nav-tabs" id="navTabs" role="tablist">
+        <button type="button" class="tab active" id="tab-basicInfo" data-section="basicInfo" role="tab" aria-selected="true"><span class="tab-text">基本信息</span></button>
+        <button type="button" class="tab" id="tab-jobIntent" data-section="jobIntent" role="tab" aria-selected="false"><span class="tab-text">求职意向</span></button>
+        <button type="button" class="tab" id="tab-education" data-section="education" role="tab" aria-selected="false"><span class="tab-text">教育经历</span></button>
+        <button type="button" class="tab" id="tab-selfEval" data-section="selfEval" role="tab" aria-selected="false"><span class="tab-text">自我评价</span></button>
+        <button type="button" class="tab" id="tab-workExp" data-section="workExp" role="tab" aria-selected="false"><span class="tab-text">工作经历</span></button>
+        <button type="button" class="tab" id="tab-projectExp" data-section="projectExp" role="tab" aria-selected="false"><span class="tab-text">项目经历</span></button>
+      </nav>
+    </aside>
+
+    <main class="main" role="main">
+      <section id="basicInfo" class="panel active" role="tabpanel" aria-labelledby="tab-basicInfo">
+        <div class="panel-inner basic-info-inner">
+          <div class="basic-photo-wrap">
+            <img id="basicPhoto" class="basic-photo" src="" alt="个人照片" />
+          </div>
+          <div class="basic-detail" id="basicDetail"></div>
+        </div>
+      </section>
+      <section id="jobIntent" class="panel" role="tabpanel" aria-hidden="true">
+        <div class="panel-inner" id="jobIntentContent"></div>
+      </section>
+      <section id="education" class="panel" role="tabpanel" aria-hidden="true">
+        <div class="panel-inner" id="educationContent"></div>
+      </section>
+      <section id="selfEval" class="panel" role="tabpanel" aria-hidden="true">
+        <div class="panel-inner" id="selfEvalContent"></div>
+      </section>
+      <section id="workExp" class="panel" role="tabpanel" aria-hidden="true">
+        <div class="panel-inner" id="workExpContent"></div>
+      </section>
+      <section id="projectExp" class="panel" role="tabpanel" aria-hidden="true">
+        <div class="panel-inner" id="projectExpContent"></div>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
