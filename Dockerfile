@@ -1,7 +1,6 @@
 # 静态站点：Nginx 托管当前目录
-FROM nginx:alpine
-
-# 国内可换镜像：docker.m.daocloud.io/library/nginx:alpine
+# 使用国内镜像，避免阿里云构建时拉取 Docker Hub 超时
+FROM docker.m.daocloud.io/library/nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 COPY . /usr/share/nginx/html/
